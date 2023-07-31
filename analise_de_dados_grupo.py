@@ -10,7 +10,9 @@ while True:
     print('=============================')
 
     idade = int(input('\nQual sua idade: '))
-    sexo = str(input('Qual seu sexo [ M / F ]: ')).strip().upper()[0]
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Qual seu sexo [ M / F ]: ')).strip().upper()[0]
     if idade >= 18:
         cont_18 = cont_18 + 1
     if idade >= 20 and sexo == 'F':
